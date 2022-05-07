@@ -1,0 +1,161 @@
+/*css reset*/
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *: before, *: after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -box-sizing: border-box;
+}
+
+nav,
+header,
+footer,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-weight: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decorations: none;
+}
+a:hover {
+  text-decorations: none;
+}
+ul,
+li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*end of css reset**********************************************/
+
+body {
+  height: 100vh;
+  background: linear-gradient(150deg, purple, yellow);
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+  font-family: 'Oswald', sans-serif;
+}
+
+input {
+  background: white;
+  width: 80px;
+  height: 40px;
+  font-size: inherit;
+  font-family: inherit;
+  text-align: center;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.plaque {
+  width: clamp(500px, 50%, 700px);
+  height: auto;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px, solid, red;
+  /* margin-left: 3rem;
+  margin-right: 3rem; */
+  margin-top:1rem;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.subheader {
+  display: flex;
+  align-self: center;
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  width: 300px;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  width: 80px;
+  height: 40px;
+  font-size: inherit;
+  font-family: inherit;
+  box-sizing: border-box;
+}
