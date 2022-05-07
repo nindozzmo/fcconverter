@@ -93,6 +93,7 @@ input {
   background: white;
   width: 8rem;
   height: 2.8rem;
+  border-radius: 2px;
   font-size: inherit;
   font-family: inherit;
   text-align: center;
