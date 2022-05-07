@@ -142,25 +142,37 @@ input {
   color: rgba(255, 255, 255, 1);
 }
 
+.alerts {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 280px;
+  height: 1.5rem;
+  font-size: 0.9rem;
+  color: red;
+  margin-left: -3rem;
+}
+
+.alertLeft {
+  width: 8rem;
+  box-sizing: border-box;
+}
+
+.alertRight {
+  width: 8rem;
+  margin-left: 5.3rem;
+}
+
 .inputs {
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.inputs. p {
+  flex-direction: column;
+}
 
 .inputs span {
   color: rgba(0, 0, 0, 0.8);
   margin-left: 0.2rem;
-}
-
-.result {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  width: 80px;
-  height: 40px;
-  font-size: inherit;
-  font-family: inherit;
-  box-sizing: border-box;
 }
