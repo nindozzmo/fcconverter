@@ -38,7 +38,7 @@ window.onload = function() {
     else if (isNaN(fahrenheit.value)) {
       fahrLenCelsRight(fahrenheit.value);
       fahrenheit.value = "";
-      left.innerHTML = "invalid input";
+      left.innerHTML = "that's not a number";
     }
     else {
       setLength(fahrenheit.value);
@@ -79,7 +79,7 @@ window.onload = function() {
     else if (isNaN(celsius.value)) {
       celsLenFahrLeft(celsius.value);
       celsius.value = "";
-      right.innerHTML = "invalid input";
+      right.innerHTML = "that's not a number";
     }
     else {
       setLength(celsius.value);

@@ -145,22 +145,22 @@ input {
 .alerts {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   box-sizing: border-box;
   width: 280px;
   height: 1.5rem;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: red;
   margin-left: -3rem;
   margin-bottom: -2rem;
 }
 
 .alertLeft {
-  width: 8rem;
-  box-sizing: border-box;
+  width: 10rem;
 }
 
 .alertRight {
-  width: 8rem;
+  width: 10rem;
   margin-left: 5.3rem;
 }
 
