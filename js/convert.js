@@ -6,7 +6,7 @@ window.onload = function() {
   fahrenheit.addEventListener('input', fahrenheitToCelsius => {
     let c = (fahrenheit.value - 32) / 1.8;
     
-    if (fahrenheit.value == "" || fahrenheit.value == "-") {
+    if (fahrenheit.value == "") {
       celsius.value = "";
     }
     else {
@@ -17,7 +17,7 @@ window.onload = function() {
   celsius.addEventListener('input', celsiusToFahrenheit => {
     let f = celsius.value * 1.8 + 32;
 
-    if (celsius.value == "" || celsius.value == "-") {
+    if (celsius.value == "") {
       fahrenheit.value = "";
     }
     else {
