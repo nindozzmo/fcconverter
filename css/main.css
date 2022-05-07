@@ -75,7 +75,7 @@ h6 {
 /*end of css reset**********************************************/
 
 body {
-  height: 100vh;
+  overflow: hidden;
   background: linear-gradient(150deg, purple, yellow);
   font-size: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
