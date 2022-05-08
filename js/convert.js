@@ -6,11 +6,15 @@ window.onload = function() {
   const right = document.getElementById("right");
 
   function setLength(x) {
-    if (x < 0 || x % 1 !=0) {
+    if (x < 0 && x % 1 !=0) {
+      fahrenheit.setAttribute("maxlength", "6");
+      celsius.setAttribute("maxlength", "6");
+    }
+    else if ((x < 0 && x % 1 ==0) || (x >= 0 && x % 1 !=0)) {
       fahrenheit.setAttribute("maxlength", "5");
       celsius.setAttribute("maxlength", "5");
     }
-    else if (x > 0 || x == 0) {
+    else if (x >= 0) {
       fahrenheit.setAttribute("maxlength", "4");
       celsius.setAttribute("maxlength", "4");
     }
