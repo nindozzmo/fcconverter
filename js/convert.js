@@ -5,35 +5,52 @@ window.onload = function() {
   const left = document.getElementById("left");
   const right = document.getElementById("right");
 
-  fahrenheit.addEventListener('input', function () {
+  function setLength(x) {
+    if (x < 0 || x % 1 !=0) {
+      fahrenheit.setAttribute("maxlength", "5");
+      celsius.setAttribute("maxlength", "5");
+    }
+    else if (x > 0 || x == 0) {
+      fahrenheit.setAttribute("maxlength", "4");
+      celsius.setAttribute("maxlength", "4");
+    }
+  }
+  
+  function fahrToCels(x) {
+    x = (x - 32) / 1.8;
+    celsius.value = x.toFixed(1);
+    left.innerHTML = "";
+    right.innerHTML = "";
+  }
 
-    function fahrToCels(x) {
-      let c = (x - 32) / 1.8;
-      celsius.value = c.toFixed(1);
+  function fahrLenCelsRight(x) {
+    if (x == "" || x == "-" || isNaN(x)) {
+      fahrenheit.setAttribute("maxlength", "4");
+      celsius.value = "";
+      right.innerHTML = "";
+      left.innerHTML = "";
+    }
+  }
+
+  function celsTofahr(x) {
+    x = x * 1.8 + 32;
+    fahrenheit.value = x.toFixed(1);
+    left.innerHTML = "";
+    right.innerHTML = "";
+  }
+
+  function celsLenFahrLeft(x) {
+    if (x == "" || x == "-" || isNaN(x)) {
+      celsius.setAttribute("maxlength", "4");
+      fahrenheit.value = "";
       left.innerHTML = "";
       right.innerHTML = "";
     }
-
-    function fahrLenCelsRight(x) {
-      if (x == "" || x == "-" || isNaN(x)) {
-        fahrenheit.setAttribute("maxlength", "4");
-        celsius.value = "";
-        right.innerHTML = "";
-      }
-    }
-
-    function setLength(x) {
-      if (x < 0) {
-        fahrenheit.setAttribute("maxlength", "5");
-      }
-      else if (x > 0 || x == 0) {
-        fahrenheit.setAttribute("maxlength", "4");
-      }
-    }
-
+  }
+  
+  fahrenheit.addEventListener('input', function () {
     if (fahrenheit.value == "" || fahrenheit.value == "-") {
       fahrLenCelsRight(fahrenheit.value);
-      left.innerHTML = "";
     }
     else if (isNaN(fahrenheit.value)) {
       fahrLenCelsRight(fahrenheit.value);
@@ -47,34 +64,8 @@ window.onload = function() {
   })
   
   celsius.addEventListener('input', function () {
-
-    function celsTofahr(x) {
-      let f = x * 1.8 + 32;
-      fahrenheit.value = f.toFixed(1);
-      left.innerHTML = "";
-      right.innerHTML = "";
-    }
-
-    function celsLenFahrLeft(x) {
-      if (x == "" || x == "-" || isNaN(x)) {
-        celsius.setAttribute("maxlength", "4");
-        fahrenheit.value = "";
-        left.innerHTML = "";
-      }
-    }
-
-    function setLength(x) {
-      if (x < 0) {
-        celsius.setAttribute("maxlength", "5");
-      }
-      else if (x > 0 || x == 0) {
-        celsius.setAttribute("maxlength", "4");
-      }
-    }
-
     if (celsius.value == "" || celsius.value == "-") {
       celsLenFahrLeft(celsius.value);
-      right.innerHTML = "";
     }
     else if (isNaN(celsius.value)) {
       celsLenFahrLeft(celsius.value);
