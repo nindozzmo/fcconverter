@@ -75,7 +75,7 @@ h6 {
 /*end of css reset**********************************************/
 
 body {
-  width: 100%;
+  width: 100vw;
   overflow: hidden;
   background: linear-gradient(150deg, purple, yellow);
   font-size: 20px;
